@@ -188,6 +188,10 @@
     <Compile Include="Migrations\202010220029197_DataUpdatedOn1.Designer.cs">
       <DependentUpon>202010220029197_DataUpdatedOn1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010220122444_DataUpdatedBy.cs" />
+    <Compile Include="Migrations\202010220122444_DataUpdatedBy.Designer.cs">
+      <DependentUpon>202010220122444_DataUpdatedBy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\Data.cs" />
     <Compile Include="Models\DataModel.cs" />
@@ -294,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010220029197_DataUpdatedOn1.resx">
       <DependentUpon>202010220029197_DataUpdatedOn1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010220122444_DataUpdatedBy.resx">
+      <DependentUpon>202010220122444_DataUpdatedBy.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

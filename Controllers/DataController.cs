@@ -37,6 +37,7 @@ namespace WebApi.Controllers
             var dataContext = new DataContext();
             var existingData = dataContext.Datas.Find(id);
             existingData.updatedOn = DateTime.Now;
+            existingData.updatedBy = "gegillam";
             dataContext.Entry(existingData).CurrentValues.SetValues(dataModel);
             dataContext.SaveChanges();
         }

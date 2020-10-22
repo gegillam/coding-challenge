@@ -95,3 +95,4 @@ C:\Users\Grant\Source\Repos\WebApi\bin\Ninject.dll
 C:\Users\Grant\Source\Repos\WebApi\bin\Ninject.xml
 C:\Users\Grant\Source\Repos\WebApi\obj\Debug\WebApi.Migrations.DataUpdatedOn.resources
 C:\Users\Grant\Source\Repos\WebApi\obj\Debug\WebApi.Migrations.DataUpdatedOn1.resources
+C:\Users\Grant\Source\Repos\WebApi\obj\Debug\WebApi.Migrations.DataUpdatedBy.resources
