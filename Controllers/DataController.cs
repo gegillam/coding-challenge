@@ -5,17 +5,27 @@ using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace WebApi.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class DataController : ApiController
     {
         //DataController(DataContext _dataContext) {
         //        //TODO: Ninject dataContext    
         //}
-
+        /// <summary>
+        /// test
+        /// </summary>
+        /// <returns></returns>
+        /// 
         public List<DataModel> get() {
+
+
             var dataContext = new DataContext();
+            var z = dataContext.Datas.ToList().Select(x => new DataModel(x)).ToList();
+
             return dataContext.Datas.ToList().Select(x => new DataModel(x)).ToList();
         }
         public DataModel get(int id) {
