@@ -99,3 +99,4 @@ C:\Users\Grant\Source\Repos\WebApi\obj\Debug\WebApi.Migrations.DataUpdatedBy.res
 C:\Users\Grant\Source\Repos\WebApi\bin\System.Web.Cors.dll
 C:\Users\Grant\Source\Repos\WebApi\bin\System.Web.Http.Cors.dll
 C:\Users\Grant\Source\Repos\WebApi\bin\System.Web.Http.Cors.xml
+C:\Users\Grant\Source\Repos\WebApi\bin\WebApi.xml

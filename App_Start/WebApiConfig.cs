@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Http;
+using WebApi.Areas.HelpPage;
 
 namespace WebApi
 {
@@ -21,6 +23,10 @@ namespace WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            // Uncomment the following to use the documentation from XML documentation file.
+            config.SetDocumentationProvider(
+                     new XmlDocumentationProvider(
+                         HttpContext.Current.Server.MapPath("~/bin/WebApi.xml")));
         }
     }
 }

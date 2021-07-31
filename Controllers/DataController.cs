@@ -28,11 +28,16 @@ namespace WebApi.Controllers
 
             return dataContext.Datas.ToList().Select(x => new DataModel(x)).ToList();
         }
+        /// <summary>
+        /// ttest
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public DataModel get(int id) {
             var dataContext = new DataContext();
             return new DataModel(dataContext.Datas.Find(id));
         }
-
+         
         // POST api/values
         public void Post(DataModel dataModel)
         {
@@ -47,7 +52,7 @@ namespace WebApi.Controllers
             var dataContext = new DataContext();
             var existingData = dataContext.Datas.Find(id);
             existingData.updatedOn = DateTime.Now;
-            existingData.updatedBy = "gegillam";
+            existingData.updatedBy = "gegillam"; //todo: implement identities
             dataContext.Entry(existingData).CurrentValues.SetValues(dataModel);
             dataContext.SaveChanges();
         }
