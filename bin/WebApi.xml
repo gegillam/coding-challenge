@@ -513,10 +513,5 @@
             </summary>
             <param name="id"></param>
         </member>
-        <member name="P:WebApi.ContactModel.id">
-            <summary>
-            test23
-            </summary>
-        </member>
     </members>
 </doc>

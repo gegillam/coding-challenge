@@ -16,11 +16,15 @@ namespace WebApi
             street = contactModel.address.street;
             zip = contactModel.address.zip;
 
-            workPhone = contactModel.phone.Find(x => x.type == "work").number;
-            cellNumber = contactModel.phone.Find(x => x.type == "cell").number;
+            workPhone = contactModel.phone
+                .Find(phone => phone.type == "work").number;
+            
+            cellNumber = contactModel.phone
+                .Find(phone => phone.type == "cell").number;
 
             email = contactModel.email;
 
+            //TODO: implement audit data
             updatedOn = DateTime.Now;
             updatedBy = "gegillam";
         }

@@ -13,7 +13,7 @@ namespace WebApi.Controllers
     public class ContactController
         : ApiController
     {
-        //DataController(DataContext _dataContext) {
+        //ContactController(DataContext _dataContext) {
         //        //TODO: Ninject Context    
         //}
 
@@ -23,14 +23,12 @@ namespace WebApi.Controllers
         /// <returns></returns>
         public List<ContactModel> get() {
 
-
             var contactContext = new ContactContext();
-            var z = contactContext.Contacts.ToList()
-                .OrderBy(x => x.lastName)
-                .ThenBy(x => x.firstName)
-                .Select(x => new ContactModel(x)).ToList();
 
-            return contactContext.Contacts.ToList().Select(x => new ContactModel(x)).ToList();
+            return contactContext.Contacts.ToList()
+                .OrderBy(contact => contact.lastName)
+                .ThenBy(contact => contact.firstName)
+                .Select(contact => new ContactModel(contact)).ToList();
         }
         /// <summary>
         /// Returns a contact based off of the id
@@ -38,7 +36,9 @@ namespace WebApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         public ContactModel get(int id) {
+
             var dataContext = new ContactContext();
+
             return new ContactModel(dataContext.Contacts.Find(id));
         }
          
@@ -51,6 +51,7 @@ namespace WebApi.Controllers
         {
             var dataContext = new ContactContext();
             dataContext.Contacts.Add(new Contact(contactModel));
+
             dataContext.SaveChanges();
         }
 
@@ -65,7 +66,7 @@ namespace WebApi.Controllers
             var dataContext = new ContactContext();
             var existingData = dataContext.Contacts.Find(id);
             existingData.updatedOn = DateTime.Now;
-            existingData.updatedBy = "gegillam"; //todo: implement identities
+            existingData.updatedBy = "gegillam"; //todo: implement identities / audit data
             dataContext.Entry(existingData).CurrentValues.SetValues(dataModel);
             dataContext.SaveChanges();
         }

@@ -33,9 +33,6 @@ namespace WebApi
             email = contact.email;
         }
         public ContactModel() { }
-        /// <summary>
-        /// test23
-        /// </summary>
         public int id { get; set; }
         public Name name { get; set; }
         public Address address { get; set; }
