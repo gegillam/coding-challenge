@@ -481,21 +481,26 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:WebApi.Controllers.DataController.get">
+        <member name="M:WebApi.Controllers.ContactController.get">
             <summary>
-            test
+            Returns a list of contacts sorted by last name then first name
             </summary>
             <returns></returns>
-            
         </member>
-        <member name="M:WebApi.Controllers.DataController.get(System.Int32)">
+        <member name="M:WebApi.Controllers.ContactController.get(System.Int32)">
             <summary>
-            ttest
+            Returns a contact based off of the id
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="P:WebApi.DataModel.id">
+        <member name="M:WebApi.Controllers.ContactController.Post(WebApi.ContactModel)">
+            <summary>
+            Adds a contact to the database
+            </summary>
+            <param name="contactModel"></param>
+        </member>
+        <member name="P:WebApi.ContactModel.id">
             <summary>
             test23
             </summary>

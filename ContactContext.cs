@@ -5,10 +5,10 @@ namespace WebApi
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DataContext : DbContext
+    public partial class ContactContext : DbContext
     {
-        public DataContext()
-            : base("name=DataModel")
+        public ContactContext()
+            : base("name=ContactModel")
         {
         }
 
@@ -16,7 +16,7 @@ namespace WebApi
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
-        public DbSet<Data> Datas { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
     }
 }
